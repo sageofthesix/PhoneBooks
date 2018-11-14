@@ -1,23 +1,281 @@
-# Compiled class file
-*.class
+/*Phone book Problem
+* Arraylists can be flexible in size and we will only use them to organize
+*	while the user is in the running program...
+* 
+*    Item								arraylist variable names
+*Stores last name 						arrLastName	
+*Stores first name						arrFirstName 
+*stores phone number 					arrPhoneNumber 
+*stores stores street address 			arrStreetAddress 
+*stores city 							arrCity 		
+*stores State							arrState 	
+*stores zipcode							arrZipcode 
+* This will allow us to associate each item with a slot number
+*	in each list (example Contact 0, last name slot 0, first name slot 0, etc.)
+*
+*uses file to store after shutdown		print sorted arraylists into file
+*loads info from file on startup		user can create or access existing file
+*										read the stored file info into an arraylist line by line
+*										the arraylist will be created and destroyed EVERYTIME 
+*
+*uses array while running to 			use ArrayList for add, remove, and list features
+*	modify data
+*
+*
+*Once an arraylist has been either created or loaded from a file
+*	the user can modify these items by choosing from a menu
+*user add			arraylist.add(position, "user input");
+*user modify		arraylist.set( Position, "New user input" );
+*user delete
+*user display <<< ??? display entire phonebook?
+*user search
+*/
 
-# Log file
-*.log
+##################################
+//								//
+//	   PSUEDO CODE MOCK UP		//
+//								//
+##################################
 
-# BlueJ files
-*.ctxt
+import java.util.*; //for scanner and arraylists
+import java.io.*; //for files
+//import javax.swing.JOptionPane; 	//Optional if we were to use dialog boxes
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+	public class PhoneBookExam		//or whatever you guys like
+	{
+		public static void main(String[] args)throws IOException  //because reasons
+		{
+			
+			Scanner input = new Scanner(System.in); //Setup scanner object
+			//Create arraylists for each field 
+			ArrayList arrLastName = new ArrayList();
+			ArrayList arrFirstName = new ArrayList();
+			ArrayList arrPhoneNumber = new ArrayList();
+			ArrayList arrStreetAddress = new ArrayList();
+			ArrayList arrCity = new ArrayList();
+			ArrayList arrState = new ArrayList();
+			ArrayList arrZipcode = new ArrayList();
+			
+//##################################//
+//									//
+//		Greet User & Intial Menu	//
+//		(switch statement)			//
+//##################################//
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+//Greeting
+ 
+//-------------Begin While Loop-------------// <-- Allows user to create/veiw/edit another Phonebook 
+											//		without closing the program
+/* Intial menu options:
+ *	1. Create new Phonebook
+ *	2. Open existing Phonebook   							
+ */
+
+			switch(user choice)
+			{
+//##################################//
+//				CASE 1				//
+//		Code to create a new file	//	
+//			(and fill it)			//					
+//##################################//		
+				case 1: 
+					//add prompt user to name the new Phone Book
+						//add prompts user to enter "contacts" into an arraylist
+						
+							//Use while-loop to loop through filling subArrayLists (see top of page)
+							
+							//add prompt
+							arrLastName.add(userinput);			// add Lastname in arrLastName
+							
+							//add prompt
+							arrFirstName.add(userinput); 		// add Firstname in arrFirstName
+							
+							//add prompt
+							arrPhoneNumber.add(userinput);		// add phone # in arrPhoneNumber 
+							
+							//add prompt
+							arrStreetAddress.add(userinput);	// add street address in arrStreetAddress
+							
+							//add prompt
+							arrCity.add(userinput);				// add City in arrCity 
+							
+							//add prompt
+							arrState.add(userinput);			// add state in arrState
+							
+							//add prompt
+							arrZipcode.add(userinput);			// add zipcode in arrZipcode
+								
+								
+							//----while until user answers yes to "add another contact?"----//
+					
+							
+					//Print arraylists in correct format to file (example below)
+						//----------------------------------//	
+						// Doe								//
+						// Jane								//
+						// 555-867-5309						//
+						// 1 Lincoln Financial Field Way	//    <--Formatted in the text file for 
+						// Philadelphia  					//		  ease to make arraylists, not for 
+						// PA								//		  the users sake... we'll format
+						// 19148							//		  for the users later on
+						//----------------------------------//
+						
+						
+					/*This should kick all the way down to the end of the program
+					 *and allow them to chose whether to make a new book or edit one 
+					 *(including the one they just saved)
+					 */
+					break;
+					
+					
+//##################################//
+//				CASE 2				//
+//	Code modify an existing file	//	
+//			(add, delete, edit)		//					
+//##################################//				
+				case 2:
+					 
+					
+					//Loads file to an Arraylists using a while loop
+					while(inputFile.hasNext())
+					{
+						
+						
+							
+							arrLastName.add(userinput);			// add Lastname in arrLastName
+							
+							arrFirstName.add(userinput); 		// add Firstname in arrFirstName
+							
+							arrPhoneNumber.add(userinput);		// add phone # in arrPhoneNumber 
+							
+							arrStreetAddress.add(userinput);	// add street address in arrStreetAddress
+							
+							arrCity.add(userinput);				// add City in arrCity 
+							
+							arrState.add(userinput);			// add state in arrState
+						
+							arrZipcode.add(userinput);			// add zipcode in arrZipcode
+						
+					}
+
+//##################################//
+//									//
+//		Existing book menu			//
+//		(switch statement)			//
+//##################################//					
+
+
+//While loop Existing menu???			
+/* Existing Phonebook menu:
+ *	1. Search for Contact
+ *	2. Add Contacts
+ *	3. Edit Contacts
+ *	4. Display Phonebook << ??? still not sure (see top of document)
+ *	5. Delete Contacts
+ *	6. Delete all Contacts in current phonebook << I added this option, makes sense to me
+ *	7. Main Menu
+ */
+
+			switch(user choice)
+			{
+					//contact search
+					case 1:
+					//While loop in case they want to display multiple
+					//search for contact... with compare string?
+					//display contact info
+					//how to handle contacts with the same last name?
+						break;
+						
+					//add more contacts
+					case 2:
+						//add prompts user to enter "contacts" into an arraylist
+						
+							//Use while-loop to loop through filling subArrayLists (see top of page)
+							
+							//add prompt
+							arrLastName.add(userinput);			// add Lastname in arrLastName
+							
+							//add prompt
+							arrFirstName.add(userinput); 		// add Firstname in arrFirstName
+							
+							//add prompt
+							arrPhoneNumber.add(userinput);		// add phone # in arrPhoneNumber 
+							
+							//add prompt
+							arrStreetAddress.add(userinput);	// add street address in arrStreetAddress
+							
+							//add prompt
+							arrCity.add(userinput);				// add City in arrCity 
+							
+							//add prompt
+							arrState.add(userinput);			// add state in arrState
+							
+							//add prompt
+							arrZipcode.add(userinput);			// add zipcode in arrZipcode
+								
+								
+							//----while until user answers yes to "add another contact?"----//
+					
+							
+					//Print arraylists in correct format to file (example below)
+						//----------------------------------//	
+						// Doe								//
+						// Jane								//
+						// 555-867-5309						//
+						// 1 Lincoln Financial Field Way	//    <--Formatted in the text file for 
+						// Philadelphia  					//		  ease to make arraylists, not for 
+						// PA								//		  the users sake... we'll format
+						// 19148							//		  for the users later on
+						//----------------------------------//
+						
+						
+					/*This should kick all the way down to the end of the program
+					 *and allow them to chose whether to make a new book or edit one 
+					 *(including the one they just saved)
+					 */
+						break;
+						
+					//Edit current contact
+					case 3:
+						//search for contact... with compare string?
+						//Display contact
+						//Requires that the program can determine the position within the array 
+						//menu to ask what they would like to change
+						//AND A THIRD FREAKIN SWITCH STATEMENT... sorry... it's been a morning <(-_-<)	
+								switch(whatever)
+								//edit name
+								case 1:
+								
+								//edit phone number
+								case 2:
+								//edit address
+								case 3:
+						break;
+					case 4:
+						break;
+					case 5:
+						break;
+					case 6:
+						break;
+					case 7:
+						choice = 'n';		
+						break;
+						
+						
+						
+				}		
+//end While loop Existing menu???
+
+						
+//##########################################//
+//											//
+//	 ○ 	 <-- Us								//
+//	く|)へ									//
+//	  〉 									//
+//	████▄									//
+//	██████▄    ヾ○ｼ <-- Bugs in our project	//
+//	████████▄ ヘ/							//
+//	██████████▄ノ							//
+//	████████████▄							//
+//##########################################//	
